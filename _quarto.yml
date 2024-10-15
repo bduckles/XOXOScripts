@@ -1,0 +1,63 @@
+project:
+<<<<<<< HEAD
+  type: book
+  output-dir: _output
+
+
+toc: true
+number-sections: true
+
+book:
+  title: "XOXO Community Survey 2024"
+  author: 
+   - name: Beth Duckles
+     email: beth@duckles.com
+  date: "October 15, 2024"
+  downloads: [pdf]
+  page-footer:
+    left: |
+     A report on engagement in the XOXO Slack Community
+#  cover-image: cover.png
+ # favicon: cover.png
+  site-url: 
+  repo-url: https://github.com/bduckles/XOXOreport
+  repo-branch: main
+  repo-actions: [edit, issue]
+  sidebar:
+    logo: 
+    style: docked
+    background: light
+    collapse-section: 1
+    border: true
+  chapters:
+    - index.md
+  #  - sections/summary.md
+    - part: The Slack 
+      chapters:
+        - sections/Values.md
+        - sections/Appreciate.md
+        - sections/Concerns.md
+   # - part: Platforms 
+    #  chapters:
+      #  - sections/Platform.md
+       # - sections/Opportunity.md
+       # - sections/ConcernsPlat.md
+       # - sections/Name.md
+ #   - part: Feels
+  #    chapters:
+  #    - sections/Impact.md
+  #    - sections/ToTheAndys.md
+ format:
+  html:
+    theme: 
+      - flatly
+    fontsize: medium 
+  pdf:
+    documentclass: scrbook
+    papersize: a4
+=======
+  title: "XOXOCommunitySurvey"
+
+editor: visual
+
+>>>>>>> 69a68c6 (First commit)

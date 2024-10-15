@@ -1,0 +1,39 @@
+---
+title: "XOXOCommunitySurvey"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+```{r}
+#packages
+library(googlesheets4)
+library(tidyverse)
+
+#Get data 
+j<- read_sheet("https://docs.google.com/spreadsheets/d/1RHiKsdYIVPlScCsBkSR3lW5keFv3N-kOlPUwshgO-lM")
+
+#pull out the type of data marked csv and split out the values by commas into two columns. 
+datcsv <- j %>%
+  filter(TypeData == "csv") %>% 
+  select(Timestamp, Values) %>% 
+  separate_rows(Values, sep = ", ") %>% 
+  arrange((Values)) 
+
+
+
+
+
+
+#Get rid of duplicates and count them.   
+datcsv_distinct <- datcsv %>% 
+  distinct(Values, .keep_all = TRUE)
+
+datcsv_counts <- datcsv %>% 
+  count(Values, sort = TRUE)
+  
+# Put back into GoogleSheet 
+sheet <- sheet_write(df_split, sheet_name = "XOXOCommSurv_ValuesList")
+
+```

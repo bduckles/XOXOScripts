@@ -1,0 +1,8 @@
+/.quarto/
+_output/*
+.DS_Store
+dictionary.dic
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
